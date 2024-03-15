@@ -142,14 +142,14 @@ export default async function updateAccount(context, input) {
     telephone2,
   } = input;
 
-  console.log("in update account providedAccountId ", providedAccountId);
-  console.log("accountIdFromContext ", accountIdFromContext);
+  // console.log("in update account providedAccountId ", providedAccountId);
+  // console.log("accountIdFromContext ", accountIdFromContext);
 
   const accountId = providedAccountId || accountIdFromContext;
-  console.log("Account ID is ", accountId);
+  // console.log("Account ID is ", accountId);
   if (!accountId) throw new ReactionError("access-denied", "Access Denied");
 
-  console.log("After account id check ", accountId);
+  // console.log("After account id check ", accountId);
 
   const account = await Accounts.findOne(
     { _id: accountId },
